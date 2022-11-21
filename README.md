@@ -1,6 +1,6 @@
 # ML Experimentation Tracking and Registry with MLflow
 
-# Background
+## Background
 
 MLflow is an excellent open source library for model registry and experimentation tracking that enables version control and governance over your ML artifacts. MLflow is compatible with various leading MLOps frameworks and supports in Java, Python, R and Spark. In the last few years, MLflow has introduced Model Serving, which allows you to host your ML artifacts as REST endpoints.
 
@@ -13,7 +13,7 @@ Disclaimers:
 - You will need a Policy in IAM that will allow you to perform the required actions for the different MLflow services above
 - ML artifacts are never promoted directly to Production. All ML artifacts are promoted to Staging and manually promoted to Production based on testing and experiment information
 
-# Backend Store
+## Backend Store
 
 The Backend Store in this project is created be leveraging AWS RDS (PostgreSQL). In this project, we leverage the free tier options for our template. The following options are selected:
 
@@ -32,11 +32,11 @@ The Backend Store in this project is created be leveraging AWS RDS (PostgreSQL).
             - Source: Custom
             - CIDR block: security group name created when EC2 instance was launched
 
-# Artifacts Store
+## Artifacts Store
 
 The Artifacts Store in this project is created by leveraging AWS S3. In this project, we create a bucket called "mlflow-artifact-store".
 
-# Tracking Server
+## Tracking Server
 
 The Tracking Server in this project is created by leveraging AWS EC2. This component of MLflow assumes that both the Backend and Artifacts Store are functional and accessible by the Tracking Server. 
 
